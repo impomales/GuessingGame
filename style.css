@@ -5,11 +5,18 @@ ul {
     list-style: none;
     padding: 0;
 }
+
 img {
     display: inline;
     width: 200px;
     height: 100px;
 }
+
+#reset {
+  background-color: #ba7e0e;
+  color: white;
+}
+
 #footer {
     width: 100%;
     border-top: solid 2px black;

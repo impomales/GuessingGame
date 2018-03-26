@@ -6,15 +6,16 @@
 
     <!-- Bootstrap and CSS here-->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   </head>
   <body>
 
-      <div id='app' class="center">
+      <div id='app' class="center container">
 
         <div id='headers'>
           <!-- Title and subtitles! -->
-          <h1 id="title">Guessing Game!</h1>
+          <h1 id="title">Play the Guessing Game!</h1>
           <h2 id="subtitle">Guess a number between 1-100</h2>
         </div>
 
@@ -22,7 +23,7 @@
           <div id='input-parent'>
             <!-- Player's guess input, and submit button -->
             <input id="player-input" type="text" placeholder="#" maxlength="3" autofocus>
-            <button id="submit" type="submit">Go!</button>
+            <button id="submit" class="btn btn-success" type="submit">Go!</button>
           </div>
             
           <div id='guesses'>
@@ -39,29 +40,27 @@
 
           <div id="menu-btns">
             <!-- reset and hint buttons -->
-            <button id="reset" type="button">Reset</button>
-            <button id="hint" type="button">Hint</button>
+            <button id="reset" class="btn btn-default" type="button">Reset</button>
+            <button id="hint" class="btn btn-info" type="button">Hint</button>
           </div>
         </div>
       </div>
 
 
 
-    <div id='footer' class="center">
-        <div>
-          <div class=''>
-            <img src='fa-logo@2x.png'></img>
+    <div id='footer' class="center container-fluid">
+        <div class="row">
+          <div class='col-sm-4'>
+            <img class="img-fluid" src='fa-logo@2x.png'></img>
           </div>
 
-          <div class=''>
+          <div class='col-sm-4'>
             <h4>Project by Isaias Pomales</h4>
           </div>
 
-          <div class=''>
-            <img src='grace_hopper_academy.png'></img>
+          <div class='col-sm-4'>
+            <img class="img-fluid" src='grace_hopper_academy.png'></img>
           </div>
-
-
         </div>
     </div>
 
