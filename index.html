@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Guessing Game</title>
+    <meta charset="utf-8">
 
     <!-- Bootstrap and CSS here-->
     <style>
@@ -33,19 +34,32 @@
 
         <div id='headers'>
           <!-- Title and subtitles! -->
+          <h1>Guessing Game!</h1>
+          <h2>Guess a number between 1-100</h2>
         </div>
 
         <div id='main'>
           <div id='input-parent'>
             <!-- Player's guess input, and submit button -->
+            <input type="text" placeholder="#" maxlength="3" autofocus>
+            <button type="submit">Go!</button>
           </div>
 
           <div id='guesses'>
             <!-- unordered list of guesses -->
+            <ul>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+              <li>-</li>
+            </ul>
           </div>
 
           <div id="menu-btns">
             <!-- reset and hint buttons -->
+            <button type="button">Reset</button>
+            <button type="button">Hint</button>
           </div>
         </div>
       </div>
@@ -59,7 +73,7 @@
           </div>
 
           <div class=''>
-            <h4>Project by YOUR NAME HERE</h4>
+            <h4>Project by Isaias Pomales</h4>
           </div>
 
           <div class=''>
