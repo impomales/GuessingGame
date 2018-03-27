@@ -1,6 +1,11 @@
 .center {
   text-align: center;
 }
+
+body {
+  background-image: url('binary.jpg');
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -13,12 +18,19 @@ img {
 }
 
 .guess {
+  background-color: white;
   display: inline;
   border: 2px solid black;
   border-radius: 10px;
   font-size: 100px;
   padding: 10px 50px;
-  margin: 0 5px;
+  margin: 0 8px;
+}
+
+#app {
+  background-color: rgba(256, 256, 256, 0.5);
+  margin-top: 50px;
+  padding: 25px;
 }
 
 #input-parent {
@@ -35,6 +47,10 @@ img {
   font-weight: bold;
   box-shadow: 2px 2px 8px inset;
   border: none;
+}
+
+.test {
+  background-color: purple;
 }
 
 #submit {
@@ -58,9 +74,38 @@ img {
   outline: none;
 }
 
+#menu-btns {
+  width: 300px;
+  margin: auto;
+}
+
 #reset {
-  background-color: #ba7e0e;
+  font-size: 25px;
   color: white;
+  margin-right: 10px;
+  width: 100px;
+  box-shadow: 2px 2px 8px black;
+  transition: box-shadow 0.5s, font-size 0.25s;
+}
+
+#reset:active {
+  box-shadow: none;
+}
+
+#hint {
+  font-size: 25px;
+  margin-left: 10px;
+  width: 100px;
+  box-shadow: 2px 2px 8px black;
+  transition: box-shadow 0.5s;
+}
+
+#hint:active {
+  box-shadow: none;
+}
+
+#author {
+  margin-top: 10px;
 }
 
 #footer {
