@@ -12,6 +12,52 @@ img {
     height: 100px;
 }
 
+.guess {
+  display: inline;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 100px;
+  padding: 10px 50px;
+  margin: 0 5px;
+}
+
+#input-parent {
+  position: relative;
+  width: 200px;
+  margin: 25px auto;
+}
+
+#player-input {
+  border-radius: 50%;
+  font-size: 75px;
+  width: 200px;
+  height: 200px;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px inset;
+  border: none;
+}
+
+#submit {
+  font-size: 25px;
+  position: absolute;
+  top: 135px;
+  left: 135px;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  box-shadow: 2px 2px 8px black;
+  transition: box-shadow 0.5s, font-size 0.25s;
+}
+
+#submit:active {
+  box-shadow: none;
+  font-size: 30px;
+}
+
+#player-input:focus {
+  outline: none;
+}
+
 #reset {
   background-color: #ba7e0e;
   color: white;
