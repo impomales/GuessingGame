@@ -29,9 +29,9 @@ img {
 }
 
 .guess {
-  background-color: #ddd;
+  background-color: #eee;
   display: inline;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 10px;
   font-size: 100px;
   padding: 10px 50px;
@@ -40,7 +40,7 @@ img {
 }
 
 #app {
-  background-color: rgba(256, 256, 256, 0.5);
+  background-color: rgba(256, 256, 256, 0.60);
   margin-top: 50px;
   padding: 25px;
 }
