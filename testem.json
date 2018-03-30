@@ -5,6 +5,7 @@
   ], 
   "src_files_ignore": [
     "node_modules/**/*",
-    "gulpfile.js"
+    "gulpfile.js",
+    "js/app.js"
   ]
 }
