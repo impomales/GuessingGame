@@ -1,14 +1,21 @@
 $(document).ready(function() {
-	const game = newGame();
+	const data = {
+		game: newGame(),
+		count: 0
+	}
 
-	$('#submit').on('click', game, handleSubmit);
-	$('#player-input').keyup(game, handleKeyUp);
+	$('#submit').on('click', data, handleSubmit);
+	$('#player-input').keyup(data, handleKeyUp);
 });
 
 function handleSubmit(e) {
+	console.log(e.data);
 	const input = $('#player-input');
-	const game = e.data;
+	const { game, count } = e.data;
 	const guess = Number(input.val());
+	const heading = $('#title');
+	const slot = $('.guess').eq(count);
+
 
 	if (!input.val()) return;
 	input.val('');
@@ -17,10 +24,13 @@ function handleSubmit(e) {
 		const response = game.playersGuessSubmission(guess);
 
 		if (response === 'You have already guessed that number.') {
-			$('#title').text(response + ' Try again.');
+			heading.text(response + ' Try again.');
 		}
+
+		slot.text(guess);
+		e.data.count++;
 	} catch (msg) {
-		$('#title').text(msg);
+		heading.text(msg);
 	}
 }
 
