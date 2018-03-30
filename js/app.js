@@ -14,6 +14,7 @@ function handleSubmit(e) {
 	const { game, count } = e.data;
 	const guess = Number(input.val());
 	const heading = $('#title');
+	const subtitle = $('#subtitle');
 	const slot = $('.guess').eq(count);
 
 
@@ -26,6 +27,11 @@ function handleSubmit(e) {
 		if (response === 'You have already guessed that number.') {
 			heading.text(response + ' Try again.');
 			return;
+		}
+
+		if (response === 'You Win!' || response === 'You Lose.') {
+			heading.text(response)
+			subtitle.text('Press the Reset button to play again.');
 		}
 
 		slot.text(guess);
