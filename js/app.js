@@ -25,6 +25,7 @@ function handleSubmit(e) {
 
 		if (response === 'You have already guessed that number.') {
 			heading.text(response + ' Try again.');
+			return;
 		}
 
 		slot.text(guess);

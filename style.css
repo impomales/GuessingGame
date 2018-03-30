@@ -33,8 +33,8 @@ img {
   display: inline;
   border: 1px solid black;
   border-radius: 10px;
-  font-size: 100px;
-  padding: 10px 50px;
+  font-size: 75px;
+  padding: 10px 20px;
   margin: 0 8px;
   box-shadow: 1px 1px 4px black;
 }
@@ -48,6 +48,12 @@ img {
 @media (max-width: 1000px) {
   #app {
     padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  #app {
+    padding-bottom: 200px;
   }
 }
 
