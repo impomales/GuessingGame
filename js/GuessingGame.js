@@ -70,3 +70,7 @@ Game.prototype.provideHint = function() {
 	res.push(generateWinningNumber());
 	return shuffle(res);
 }
+
+$(document).ready(function() {
+	console.log('testing, 1, 2');
+})
