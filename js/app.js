@@ -6,12 +6,22 @@ $(document).ready(function() {
 });
 
 function handleSubmit(e) {
-	const game = e.data;
 	const input = $('#player-input');
+	const game = e.data;
 	const guess = Number(input.val());
+
+	if (!input.val()) return;
 	input.val('');
 
-	console.log(game.playersGuessSubmission(guess));
+	try {
+		const response = game.playersGuessSubmission(guess);
+
+		if (response === 'You have already guessed that number.') {
+			$('#title').text(response + ' Try again.');
+		}
+	} catch (msg) {
+		$('#title').text(msg);
+	}
 }
 
 function handleKeyUp(e) {
