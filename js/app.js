@@ -11,7 +11,6 @@ $(document).ready(function() {
 });
 
 function handleSubmit(e) {
-	console.log(e.data);
 	const input = $('#player-input');
 	const { game, count } = e.data;
 	const guess = Number(input.val());
