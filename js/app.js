@@ -38,6 +38,7 @@ function handleSubmit(e) {
 			subtitle.text('Press the Reset button to play again.');
 			submit.prop('disabled', true);
 			hint.prop('disabled', true);
+			input.prop('disabled', true);
 		}
 		else {
 			if (game.isLower()) subtitle.text('Guess Higher!');
@@ -65,6 +66,7 @@ function handleReset(e) {
 	$('#subtitle').text('Guess a number between 1-100');
 	$('#submit').prop('disabled', false);
 	$('#hint').prop('disabled', false);
+	$('#player-input').prop('disabled', false);
 }
 
 function handleHint(e) {
