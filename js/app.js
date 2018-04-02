@@ -16,6 +16,8 @@ function handleSubmit(e) {
 	const heading = $('#title');
 	const subtitle = $('#subtitle');
 	const slot = $('.guess').eq(count);
+	const submit = $(this);
+	const hint = $('#hint');
 
 
 	if (!input.val()) return;
@@ -32,6 +34,8 @@ function handleSubmit(e) {
 		if (response === 'You Win!' || response === 'You Lose.') {
 			heading.text(response)
 			subtitle.text('Press the Reset button to play again.');
+			submit.prop('disabled', true);
+			hint.prop('disabled', true);
 		}
 
 		slot.text(guess);
