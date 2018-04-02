@@ -30,12 +30,17 @@ function handleSubmit(e) {
 			heading.text(response + ' Try again.');
 			return;
 		}
+			
+		heading.text(response);
 
 		if (response === 'You Win!' || response === 'You Lose.') {
-			heading.text(response)
 			subtitle.text('Press the Reset button to play again.');
 			submit.prop('disabled', true);
 			hint.prop('disabled', true);
+		}
+		else {
+			if (game.isLower()) subtitle.text('Guess Higher!');
+			else subtitle.text('Guess Lower');
 		}
 
 		slot.text(guess);
