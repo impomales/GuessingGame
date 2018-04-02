@@ -6,6 +6,7 @@ $(document).ready(function() {
 
 	$('#submit').on('click', data, handleSubmit);
 	$('#player-input').keyup(data, handleKeyUp);
+	$('#reset').on('click', data, handleReset);
 });
 
 function handleSubmit(e) {
@@ -53,4 +54,15 @@ function handleSubmit(e) {
 function handleKeyUp(e) {
 	const code = e.keyCode || e.which;
 	if (code === 13) handleSubmit({data: e.data});
+}
+
+function handleReset(e) {
+	e.data.game = newGame();
+	e.data.count = 0;
+
+	$('.guess').html('&nbsp;-&nbsp;');
+	$('#title').text('Play the Guessing Game!');
+	$('#subtitle').text('Guess a number between 1-100');
+	$('#submit').prop('disabled', false);
+	$('#hint').prop('disabled', false);
 }
