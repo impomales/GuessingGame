@@ -7,6 +7,7 @@ $(document).ready(function() {
 	$('#submit').on('click', data, handleSubmit);
 	$('#player-input').keyup(data, handleKeyUp);
 	$('#reset').on('click', data, handleReset);
+	$('#hint').on('click', data, handleHint);
 });
 
 function handleSubmit(e) {
@@ -17,7 +18,7 @@ function handleSubmit(e) {
 	const heading = $('#title');
 	const subtitle = $('#subtitle');
 	const slot = $('.guess').eq(count);
-	const submit = $(this);
+	const submit = $('#submit');
 	const hint = $('#hint');
 
 
@@ -65,4 +66,10 @@ function handleReset(e) {
 	$('#subtitle').text('Guess a number between 1-100');
 	$('#submit').prop('disabled', false);
 	$('#hint').prop('disabled', false);
+}
+
+function handleHint(e) {
+	const hints = e.data.game.provideHint();
+
+	$("#title").text(`The winning number is ${hints[0]}, ${hints[1]}, or ${hints[2]}`);
 }
